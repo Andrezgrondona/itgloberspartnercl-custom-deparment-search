@@ -25,7 +25,6 @@ const DepartmentGroup = ({ departments, handleSetSlug }: Props) => {
         handleSetSlug(`${event.target.value}/?map=ft`)
     }
 
-
     const DepartmentsOptions = (department: any) => {
 
         console.log(department.department.slug)
@@ -33,21 +32,17 @@ const DepartmentGroup = ({ departments, handleSetSlug }: Props) => {
             <option
                 value={department.department.slug}
                 key={department.department.id}
-
             >
                 {department.department.slug}
-
             </option>
         )
-
-
     }
     return (
         <select
             onChange={onHandleSetSlug}
             defaultValue="value0"
         >
-            <option disabled value="value0">Ver productos</option>
+            <option disabled value="value0">Ver Productos</option>
             {departments.map((department: Category) => (<DepartmentsOptions department={department} />))}
         </select>
     )
